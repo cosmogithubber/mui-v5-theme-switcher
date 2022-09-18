@@ -76,8 +76,6 @@ const App: React.FunctionComponent<AppProps> = (props) => {
   const themeSelect = React.useMemo(
     () => ({
       selectTheme: (evt: SelectChangeEvent) => {
-        console.log('in App selectTheme ', evt);
-        console.log(evt.target.value);
         setInputs((prevState) => ({
           ...prevState,
           [evt.target.name]: evt.target.value,
@@ -118,8 +116,6 @@ const App: React.FunctionComponent<AppProps> = (props) => {
                 flexDirection: 'row',
                 p: 1,
                 m: 1,
-                // bgcolor: 'background.paper',
-                // borderRadius: 1,
               }}>
               <FormControlLabel
                 control={

@@ -1,25 +1,78 @@
-# React TypeScript MUI v5 - DynamicTheme Switching
+# React TypeScript MUI v5 - Dynamic Theme Switching
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and rewired for Webpack configuration with [Rewired](https://github.com/timarney/react-app-rewired). Used
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and rewired for Webpack configuration with [Rewired](https://github.com/timarney/react-app-rewired). Is is using [MUI v5](https://github.com/mui/material-ui) (formerly Material-UI) with [Emotion](https://github.com/emotion-js/emotion) as default style library for generatin CSSmfor MUI components.
 
-## Available Scripts
+# Table of Contents
 
-In the project directory, you can run:
+- [Quickstart](#quickstart)
+- [Unit Testing and Linting](#unit-testing-and-linting)
+- [Create a MUI theme](#create-a-mui-theme)
+- [Building a project](#building-a-project)
 
-### `pnpm start`
+## Quickstart
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1/ Install dependencies
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+In root folder:
 
-### `pnpm test`
+    pnpm i
+    pnpm start
+
+navigate to http://localhost:3000
+
+## Create a MUI theme
+
+Createa new file of you color choice in the theme folder (e.g. light-blue)
+
+```
+root
+├── package.json
+├── src
+│   └── src
+│        └── styles
+│               └──theme
+│                    └──light-blue.ts
+```
+
+- Enter the code
+
+```
+import { lightBlue } from '@mui/material/colors';
+import { ThemeOptions } from '@mui/material';
+
+export const lightTheme: ThemeOptions = {
+  palette: {
+    mode: 'light',
+    primary: lightBlue,
+    secondary: lightBlue,
+    divider: lightBlue[200],
+    text: {
+      primary: lightBlue[900],
+      secondary: lightBlue[800],
+    },
+    background: {
+      default: lightBlue[100],
+      paper: lightBlue[200],
+    },
+  },
+};
+```
+
+- Add import in ./src/styles/index.ts
+- Add case in switch statement in App.ts
+
+## Unit Testing and Linting
+
+Run jest tests and eslint checks
+
+    pnpm test
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `pnpm run build`
+## Building a project
+
+    pnpm build
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.

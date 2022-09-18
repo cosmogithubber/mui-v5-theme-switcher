@@ -18,7 +18,6 @@ export const ThemeSwitchModeSelect = () => {
   });
 
   const handleSwitch = (evt: SelectChangeEvent) => {
-    console.log(evt.target.value);
     setInputs((prevState) => ({
       ...prevState,
       [evt.target.name]: evt.target.value,
