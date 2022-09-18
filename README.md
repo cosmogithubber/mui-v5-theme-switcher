@@ -1,4 +1,4 @@
-# React TypeScript MUI v5 - DynamicTheme Switching
+# React TypeScript MUI v5 - Dynamic Theme Switching
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and rewired for Webpack configuration with [Rewired](https://github.com/timarney/react-app-rewired). Used
 
