@@ -28,10 +28,9 @@ Createa new file of you color choice in the theme folder (e.g. light-blue)
 root
 ├── package.json
 ├── src
-│   └── src
-│        └── styles
-│               └──theme
-│                    └──light-blue.ts
+│    └── styles
+│           └──theme
+│                └──light-blue.ts
 ```
 
 - Enter the code
